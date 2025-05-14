@@ -907,6 +907,9 @@ section,
 .featured .card .img {
   position: relative;
   padding: 20px 20px 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .featured .card .icon {
@@ -1027,6 +1030,20 @@ section,
 @media (max-width: 640px) {
   .features .features-item+.features-item {
     margin-top: 40px;
+  }
+
+  .features .features-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+
+  .features .features-item img {
+    margin-bottom: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
