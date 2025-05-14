@@ -29,7 +29,7 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.5);  /* The default color of the main navmenu links */
+  --nav-color: rgba(255, 255, 255, 0.795);  /* The default color of the main navmenu links */
   --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -148,7 +148,7 @@ h6 {
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 20px 0;
+  padding: 10px 0;
   transition: all 0.5s;
   z-index: 997;
 
@@ -164,6 +164,13 @@ h6 {
   align-items: center;
   max-height: 32px;
   margin-right: 8px;
+}
+
+.header .logo h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -1059,7 +1066,30 @@ section,
 .gallery {
   overflow: hidden;
 }
+.gallery .gallery-item {
+  background-color: var(--surface-color);
+  padding: 20px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
 
+.img-fluid {
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .img-fluid {
+    width: 50%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery .gallery-item img {
+    width: 50%;
+    height: auto;
+  }
+}
 .gallery .swiper-wrapper {
   height: auto;
 }
@@ -1096,7 +1126,7 @@ section,
     padding: 4px;
     z-index: 1;
     transform: scale(1.1);
-    border-radius: 25px;
+    border-radius: 20px;
     transition: none;
   }
 }
