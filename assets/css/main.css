@@ -148,9 +148,10 @@ h6 {
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 10px 0;
+  padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
+
 }
 
 .header .logo {
@@ -165,11 +166,17 @@ h6 {
   margin-right: 8px;
 }
 
-.header .logo h1 {
-  font-size: 30px;
-  margin: 0;
-  font-weight: 700;
-  color: var(--heading-color);
+@media (max-width: 768px) {
+  .header .logo h1 {
+    display: none;
+  }
+
+  .header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
 }
 
 .scrolled .header {
@@ -657,6 +664,7 @@ section,
   display: flex;
   align-items: center;
   background: url(../img/bgf.png) center center no-repeat;
+  background-size: cover;
 }
 
 .hero:before {
